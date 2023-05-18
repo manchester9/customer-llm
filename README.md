@@ -15,4 +15,4 @@ Scalable and flexible chatbot architecture, with separate microservices for inte
 - Streamlit container for frontend on Kubernetes 
 
 If time permits: MLflow for versioning, & CI/CD pipeline for automation
-Integrate LangChain with Seldon or TFServing
+Integrate LangChain with Seldon/TFServing/TorchServe
