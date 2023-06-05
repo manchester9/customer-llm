@@ -1,15 +1,16 @@
 import itertools
+from langchain.chat_models import ChatOpenAI
 from langchain.embeddings.openai import OpenAIEmbeddings
 from langchain.vectorstores import Chroma
 from langchain.chains import ConversationalRetrievalChain
+
+import chromadb
 from chromadb.errors import NotEnoughElementsException
 import streamlit as st
 from util_funcs import text_to_docs,parse_uploaded_file
-from langchain.chat_models import ChatOpenAI
+
 # initialize the LLM
-
 llm=ChatOpenAI(temperature=0, model_name="gpt-3.5-turbo",request_timeout=120)
-
 
 @st.cache_resource
 def  create_embs(parsed_files):
