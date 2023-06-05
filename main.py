@@ -16,7 +16,6 @@ if "chat_his" not in st.session_state:
     st.session_state.chat_his=[]
 
 
-
 # these columns will help with centering the title
 col1,col_center,col3 = st.columns([1,2,1])
 with col_center :
