@@ -7,4 +7,5 @@ altair==4.0
 openai
 tiktoken
 chromadb
+streamlit_chat
 
