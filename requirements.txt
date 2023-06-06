@@ -3,9 +3,10 @@ fpdf==1.7.2
 langchain==0.0.179
 pypdf==3.9.0
 streamlit==1.22.0
+streamlit_chat==0.0.2.2
 altair==4.0
 openai
 tiktoken
-chromadb
-streamlit_chat
+chromadb==0.3.20
+
 
