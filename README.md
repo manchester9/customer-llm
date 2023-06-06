@@ -16,9 +16,9 @@ This project has three main files:
 - `core_funcs.py`: This file contains all the Langchain functionalities used in the app.
 
 ## Usage example
-- I uploaded a few product based seeds with information on fat, calorie content, description, temperature etc
-- How much fat is in Sorghum?
-- What is the calore content - Conversation history is stored hence we dont need to mention Sorghum again
+- I uploaded a few docx with product information on fat, calorie content, description, temperature etc
+    - How much fat is in Sorghum?
+    - What is the calore content - Conversation history is stored hence we dont need to mention Sorghum again
 
 ## Contact
 If you have any questions or feedback, feel free to reach out to me at rolandferrao@yahoo.com
