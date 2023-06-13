@@ -7,6 +7,7 @@ from fpdf import FPDF
 import streamlit as st
 
 def chat_history_download(history):
+
     """ this function creates a PDF file that contains the chat history of the user
             Parameters:
                 history(list of tuples) : this stores the entire chat history between the user and the q&a bot
@@ -86,6 +87,7 @@ def parse_docx(file):
                 file(UploadedFile) : this represents the uploaded document
             Returns:
                     text(str): a string representing the content of the document"""""
+    #len_pages(file)
     text = docx2txt.process(file)
     # Remove multiple newlines
     text = re.sub(r"\n\s*\n", "\n\n", text)
@@ -113,7 +115,7 @@ def text_to_docs(text):
     doc_chunks = []
 
     for doc in page_docs:
-        text_splitter = CharacterTextSplitter.from_tiktoken_encoder(chunk_size=900, chunk_overlap=0)
+        text_splitter = CharacterTextSplitter.from_tiktoken_encoder(chunk_size=1000, chunk_overlap=0)
 
         chunks = text_splitter.split_text(doc.page_content)
         for i, chunk in enumerate(chunks):

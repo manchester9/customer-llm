@@ -1,16 +1,48 @@
 import itertools
-from langchain.chat_models import ChatOpenAI
 from langchain.embeddings.openai import OpenAIEmbeddings
 from langchain.vectorstores import Chroma
+from langchain.docstore.document import Document
+from langchain.chains.summarize import load_summarize_chain
 from langchain.chains import ConversationalRetrievalChain
-
-import chromadb
 from chromadb.errors import NotEnoughElementsException
 import streamlit as st
 from util_funcs import text_to_docs,parse_uploaded_file
-
+from langchain.chat_models import ChatOpenAI
 # initialize the LLM
+
 llm=ChatOpenAI(temperature=0, model_name="gpt-3.5-turbo",request_timeout=120)
+
+def generate_summary(files):
+   
+    parsed_files=[parse_uploaded_file(f) for f in files]
+ 
+    summary_chain = load_summarize_chain(llm=llm,chain_type="stuff")
+    map_reduce = load_summarize_chain(llm=llm,
+                                     chain_type='map_reduce',
+                                    )
+    docs=[]
+
+    for f in parsed_files:
+
+        summary=summary_chain.run(text_to_docs(f))
+        st.write(summary)
+
+        st.session_state.summaries.append(summary)
+        
+    
+    
+                                          
+    #summary_chain.run(docs)
+    
+
+# Add page numbers as metadata
+
+        
+       
+    
+    
+    
+
 
 @st.cache_resource
 def  create_embs(parsed_files):

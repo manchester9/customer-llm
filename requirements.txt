@@ -7,4 +7,5 @@ streamlit_chat==0.0.2.2
 altair==4.0
 openai
 tiktoken
-chromadb==0.3.20
+chromadb
+
