@@ -20,8 +20,6 @@ This project has three main files:
 - `util_funcs.py`: This file contains the parsing functions used in the app.
 - `core_funcs.py`: This file contains all the Langchain functionalities used in the app.
 
-
-
 ## Contact
 
-If you have any questions or feedback, feel free to reach out to me at
+If you have any questions or feedback, feel free to reach out to me at rolandferrao@yahoo.com
