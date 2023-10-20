@@ -12,7 +12,9 @@ To run the app, use the following command:
 This project has three main files for all functions:
 - `main.py`: This file contains the Streamlit layout for the web app.
 - `util_funcs.py`: This file contains the parsing functions used in the app.
-- `core_funcs.py`: This file contains all the Langchain functionalities used in the app.
+- `core_funcs.py`: This file contains all the Langchain functionalities used in 
+the app.
+- `requirements.txt`: Any requirements needed for the environment 
 
 ## Contact
 If you have any questions or feedback, feel free to reach out to me at rolandferrao@yahoo.com
